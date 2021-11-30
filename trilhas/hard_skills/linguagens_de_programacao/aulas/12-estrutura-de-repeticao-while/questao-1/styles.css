@@ -1,0 +1,190 @@
+* {
+  font-family: 'Homer Simpson Revised', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-board: #00551e;
+  --color-border-board: #603204;
+  --color-top-wall: #a3b752;
+  --color-center-wall: #6b7633;
+  --color-bottom-wall: #76824f;
+}
+
+#top-wall {
+  background-color: var(--color-top-wall);
+  height: 55vh;
+}
+
+#center-wall {
+  background-color: var(--color-center-wall);
+  height: 40vh;
+}
+
+#bottom-wall {
+  background-color: var(--color-bottom-wall);
+  height: 5vh;
+}
+
+#container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3%;
+}
+
+#blackboard {
+  background-color: var(--color-board);
+  border: 20px solid var(--color-border-board);
+  height: 100%;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.line-board {
+  overflow: hidden;
+  margin: 0 auto;
+  display: inline-block;
+  font-weight: normal;
+  flex: 1;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.line-board-active {
+  overflow: hidden;
+  margin: 0 auto;
+  display: inline-block;
+  font-weight: normal;
+  flex: 1;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.line-board-active:after {
+  content: '';
+  display: inline-block;
+  background-color: white;
+  margin-left: 2px;
+  height: 25px;
+  width: 4px;
+  animation: cursor 0.4s infinite;
+}
+
+@keyframes cursor {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+#container-form {
+  margin: 0 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#container-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-form label{
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+#container-form form input{
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+#container-form form h3{
+  margin-top: 10px;
+}
+
+#container-form form button{
+  background-color: var(--color-board);
+  color: white;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+#container-form form button:hover{
+  opacity: 1;
+}
+
+#container-form img{
+  height: 50%;
+}
+
+#container-img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.spin {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: var(--color-board);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin-top: 40px;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
