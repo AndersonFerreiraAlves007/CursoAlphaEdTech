@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Audiowide', cursive;
+}
+
+body {
+  background-color: crimson;
+}
+
+#container-inputs {
+  display: flex;
+}
+
+#container-btns {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  background-color: azure;
+  border: 2px solid crimson;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  margin: 10px;
+}
+
+button {
+  flex: 1;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  opacity: 0.9;
+  background-color: crimson;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+span {
+  margin: 10px;
+  color: white;
+}
+
+section {
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  margin: 20px 10%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+@media (max-width: 700px) {
+  #container-inputs {
+    flex-direction: column;
+  }
+  
+  #container-btns {
+    flex-direction: column;
+  }
+
+}
