@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Audiowide', cursive;
+}
+
+table {
+  border-collapse: collapse;
+  width: 75%;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.7)
+}
+
+#btn-evolution {
+  border: none;
+  background-color: crimson;
+  color: white;
+  height: 30px;
+  width: 200px;
+  cursor: pointer;
+  opacity: 0.9;
+  margin: 0 auto;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+#background {
+  background-image: url(assets/img/background2.jpg);
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: -1000;
+  background-size: cover;
+}
+
+th {
+  background-color: crimson;
+  color: white;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  animation: gradiente 5s infinite alternate-reverse;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.flag {
+  width: 70px;
+  margin: 0 20px;
+}
+
+#container-title-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#container-table {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#screen-loading {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #008700;
+  opacity: 1;
+}
+
+#road {
+  height: 50%;
+  width: 100%;
+  background-image: url(assets/img/pista.jpg);
+  background-size: 300px 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0px;
+  position: relative;
+}
+
+#road img {
+  height: 50px;
+  width: 75px;
+  position: absolute;
+  left: 0;
+  animation: run 5s infinite;
+}
+
+#carro1::after {
+  content: "lalala"; 
+   
+}
+
+#carro1 {
+  top:  25px ;
+}
+
+#carro2 {
+  transform: rotate(180deg);
+  top:  calc(50% - 25px) ;
+}
+
+#carro3 {
+  top:  calc(100% - 75px) ;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+
+  .flag {
+    display: none;
+  }
+
+  th, td {
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .option-race h3{
+    font-size: 15px;
+  }
+
+  .option-race label{
+    font-size: 12px;
+  }
+
+  #container-players {
+    flex-direction: column;
+  }
+  
+}
+
+#container-players {
+  display: flex;
+}
+
+.player {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  flex: 1;
+  background-color: rgba(255,255,255,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.player div :nth-child(1) {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.option-race {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  flex: 1;
+  background-color: rgba(255,255,255,0.7)
+}
+
+.option-race h3{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.option-race input{
+  text-align: center;
+  border: none;
+  width: 100px;
+  height: 20px;
+  background-color: transparent
+}
+
+.option-race div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-race button{
+  border: none;
+  background-color: crimson;
+  color: white;
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.option-race button:hover{
+  opacity: 1;
+}
+
+@keyframes run {
+  from {left: 0px;}
+  to {left: calc(100vw - 75px) ;}
+}
+
+@keyframes gradiente {
+  from {color: crimson;}
+  to {color: teal;}
+}

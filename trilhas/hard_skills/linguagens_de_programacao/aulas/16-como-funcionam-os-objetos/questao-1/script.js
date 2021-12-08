@@ -179,6 +179,11 @@ const raceModes = [
     laps: 10,
     editMode: true,
   },
+  {
+    label: 'Leonardo',
+    laps: 20,
+    editMode: true,
+  },
 ]
 
 function makeOptionRace(raceMode, id) {

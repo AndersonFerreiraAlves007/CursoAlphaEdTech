@@ -1,4 +1,21 @@
-# Referências
+<h4 align="center"> 
+♻️ Concluído 🚀
+</h4>
+
+## 🔑 Palavras-chave
+---
+
+![](https://img.shields.io/static/v1?label&message=Shell_Script&color=red)
+
+## 📖 Sobre a aula - Shell Scripting
+---
+
+-  **Data:** 29/11/2021
+-  **Professor:** Kenji Taniguchi
+-  **Descrição:** Nesta aula aprendemos fazer shell scripts, criando e manipulando variáveis, executando comando e manipulando o fluxo de execução.
+
+## 📚 Referências
+---
 
 1. [https://www.devmedia.com.br/introducao-ao-shell-script-no-linux/25778](https://www.devmedia.com.br/introducao-ao-shell-script-no-linux/25778)
 2. [https://www.hostinger.com.br/tutoriais/comandos-bash-linux](https://www.hostinger.com.br/tutoriais/comandos-bash-linux)
@@ -6,7 +23,13 @@
 4. [https://linuxconfig.org/bash-scripting-tutorial](https://linuxconfig.org/bash-scripting-tutorial)
 5. [https://guialinux.uniriotec.br/shell/](https://guialinux.uniriotec.br/shell/)
 
-# Resumo
+## ✏️ Atividade
+---
+
+- [Questão 1](questao-1/README.md)
+
+## 📒 Resumo
+---
 
 Scripts é basicamente um algoritmo projetado para executar uma tarefa, geralmente tarefas repetitivas, e que desependeriam muito tempo do programador.
 
@@ -36,10 +59,12 @@ para ler entradas do usuário use: read variavel
 
 Comando condicional:
 
+```
 if [ CONDICAO ];
 then
   AÇÕES
 Fi
+```
 
 sempre dixar espaços ao redor da condição
 
@@ -61,15 +86,18 @@ inteiro1 -eq inteiro2, os inteiros possuem os mesmos valores
 
 Comando Else:
 
+```
 if [ CONDICAO ];
    then
        AÇÕES_1
   else
       AÇÕES_2
 fi
+```
 
 Comando Elif:
 
+```
 if [ CONDICAO_1 ];
  then
   AÇÕES_1
@@ -87,11 +115,13 @@ if [ CONDICAO_1 ];
  then
   AÇÕES_N
 Fi
+```
 
 Coamndo Case:
 
-sintaxe maisn enxuta de múltiplas condicionais
+sintaxe mais enxuta de múltiplas condicionais
 
+```
 case VARIAVEL in
   CASO_1)
     AÇÕES_1
@@ -103,23 +133,29 @@ case VARIAVEL in
     AÇÕES_N
 ;;
 esac
+```
 
 Comando For
 
+```
 for VARIAVEL in VALOR_1, VALOR_2 … VALOR_N;
   do
        AÇÕES
   done
+```
 
+```
 #!/bin/bash
  echo “Testando o loop for”
  for i in {10..0};
  do
    echo “$i”
  done
+```
 
 Comando While:
 
+```
 while [ CONDICAO ];
      do
         AÇÕES
@@ -131,11 +167,16 @@ nome_funcao()
   {
       AÇÕES
 }
+```
 
 Argumentos recebidos pelo script:
 
-$0: nome do script
+```
+$0: nome do script 
+
 $1...$n, parametroas passadps para a função na ordem,
+
+
 $#, numero de parametros passados
 
 cat /etc/shells: exibe a lista de shells disponíveis
@@ -147,3 +188,4 @@ primeiro definir a função antes de invoca-la
 funções bash só retornam um valor
 
 echo -n "texto", adicionana o texto na mesma linha, não pula linha
+```
