@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 18 trila backend</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin: 10px 0px;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 10px;
+      background-color: rgba(255,255,255,0.7);
+    }
+
+    th {
+      color: black;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #container-table {
+      flex: 3;
+      padding: 10px;
+    }
+
+    #container-table div{
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+      overflow-x: auto;
+    }
+
+    button {
+      background-color: rgba(136, 42, 61, 0.774);
+      width: 120px;
+      border: none;
+      border-radius: 5px;
+      height: 25px;
+      margin: 10px 0px;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+    }
+
+    button:hover {
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.4) ;
+    }
+
+    input {
+      height: 25px;
+      padding-left: 5px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="number" id="id" placeholder="Id">
+    <input type="text" id="name" placeholder="Nome">
+    <input type="text" id="email" placeholder="Email">
+  </div>
+  <button id="btn-search-clients" type="button" onclick="searchClients()">Obter Clientes</button>
+  <section id="container-table">
+    <div>
+      <h2>Lista Clientes</h2>
+      <table id="table"></table>
+    </div>
+  </section>
+  <script>
+    function searchClients() {
+      const idValue = document.getElementById('id').value;
+      const nameValue = document.getElementById('name').value;
+      const emailValue = document.getElementById('email').value;
+
+      fetch(`/clientes?id=${idValue}&name=${nameValue}&email=${emailValue}`)
+        .then(function(response) {
+          response.json().then(function(clientes) {
+            const table = document.getElementById('table')
+            table.innerHTML = `
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+              </tr>
+            `
+            clientes.forEach((clienteItem) => table.innerHTML += `
+              <tr>
+                <td>${clienteItem.id}</td>
+                <td>${clienteItem.name}</td>
+                <td>${clienteItem.email}</td>
+              </tr>
+            `)
+          })
+        }
+      ).catch(function(err) {
+        console.error('Failed retrieving information', err);
+      });
+    }
+  </script>
+</body>
+</html>
