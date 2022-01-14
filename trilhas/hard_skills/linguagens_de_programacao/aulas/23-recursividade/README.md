@@ -30,3 +30,7 @@
 ---
 
 
+https://github.com/AndersonFerreiraAlves007/CursoAlphaEdTech/blob/main/trilhas/hard_skills/linguagens_de_programacao/aulas/23-recursividade/questao-1/index.js
+
+
+https://github.com/AndersonFerreiraAlves007/CursoAlphaEdTech/blob/main/trilhas/hard_skills/linguagens_de_programacao/aulas/23-recursividade/questao-2/index.js

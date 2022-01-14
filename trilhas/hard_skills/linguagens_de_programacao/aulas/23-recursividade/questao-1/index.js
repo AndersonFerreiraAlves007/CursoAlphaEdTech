@@ -4,7 +4,7 @@ function fatorial(numero) {
       if(numero === 0 || numero === 1) {
         return 1;
       } else {
-        fatorial(numero - 1)
+        return numero * fatorial(numero - 1)
       }
     } else {
       return -1;
@@ -14,4 +14,4 @@ function fatorial(numero) {
   }
 }
 
-fatorial(5)
+ console.log(fatorial(6))
