@@ -3,12 +3,12 @@
 
 const numbers = [10, 25, 34, 89]
 
-function sum(p1, p2, p3, p4) {
-  return (p1 + p2 + p3 + p4)
+function multiply(p1, p2, p3, p4) {
+  return (p1 * p2 * p3 * p4)
 }
 
 console.log('Letra A')
-console.log(sum(...numbers))
+console.log(multiply(...numbers))
 
 // Letra B
 
