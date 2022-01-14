@@ -1,0 +1,4 @@
+Questão 1: https://github.com/AndersonFerreiraAlves007/CursoAlphaEdTech/blob/main/trilhas/hard_skills/linguagens_de_programacao/aulas/23-recursividade/questao-1/index.js
+
+
+Questão 2: https://github.com/AndersonFerreiraAlves007/CursoAlphaEdTech/blob/main/trilhas/hard_skills/linguagens_de_programacao/aulas/23-recursividade/questao-2/index.js
