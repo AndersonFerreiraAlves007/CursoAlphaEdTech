@@ -10,7 +10,7 @@ let matrizString = ''
 
 function iterar(matriz, i, j) {
   if(i < matriz.length) {
-    if(j < matriz.length - 1) {
+    if(j < matriz[i].length - 1) {
       matrizString = matrizString + String(matriz[i][j]).padEnd(10)
       iterar(matriz, i, j + 1);
     } else {

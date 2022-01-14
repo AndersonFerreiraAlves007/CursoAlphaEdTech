@@ -14,4 +14,11 @@ function fatorial(numero) {
   }
 }
 
- console.log(fatorial(6))
+const fatorialCalculado = fatorial('lalala')
+
+if(fatorialCalculado === -1) {
+  console.log('O valor deve ser um inteiro positivo incluindo o 0!')
+} else {
+  console.log(fatorialCalculado)
+}
+ 
