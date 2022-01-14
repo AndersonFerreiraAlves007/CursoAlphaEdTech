@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 20 trilha backend</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin: 10px 0px;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 10px;
+      background-color: rgba(255,255,255,0.7);
+    }
+
+    th {
+      color: black;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #container-table {
+      flex: 3;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    #container-table div{
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+      overflow-x: auto;
+    }
+
+    button {
+      background-color: rgba(136, 42, 61, 0.774);
+      width: 120px;
+      border: none;
+      border-radius: 5px;
+      height: 25px;
+      margin: 10px 0px;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+    }
+
+    button:hover {
+      box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.4) ;
+    }
+
+    select, input {
+      height: 25px;
+      padding-left: 5px;
+      width: 200px;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <select id="atr">
+			<option value="id">ID</option>
+			<option value="name">Nome</option>
+			<option value="email">Email</option>
+		</select>
+    <input type="number" id="value" placeholder="valor">
+  </div>
+  <section id="container-table">
+    <div>
+      <h2>Lista Clientes</h2>
+      <table id="table"></table>
+    </div>
+  </section>
+  <div id="message"></div>
+  <script>
+
+    function renderTable(clientes) {
+      const table = document.getElementById('table')
+      table.innerHTML = `
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+        </tr>
+      `
+      clientes.forEach((clienteItem) => table.innerHTML += `
+        <tr>
+          <td>${clienteItem.id}</td>
+          <td>${clienteItem.name}</td>
+          <td>${clienteItem.email}</td>
+        </tr>
+      `)
+    }
+
+    function searchClients(atr, value) {
+      fetch(`/clientes?atr=${atr}&value=${value}`)
+        .then(function(response) {
+          response.json().then(function(clientes) {
+            renderTable(clientes);
+          })
+        }
+      ).catch(function(err) {
+        console.error('Failed retrieving information', err);
+      });
+    }
+
+    function search() {
+      const value = document.getElementById('value').value;
+      const atr = document.getElementById('atr').value;
+
+      if(atr === 'id') {
+        if(Number.isNaN(parseInt(value, 10))) {
+          document.getElementById('message').innerHTML = 'É necessário fornecer um ID!'
+          renderTable([])
+        } else {
+          document.getElementById('message').innerHTML = ''
+          searchClients(atr, value);
+        }
+      } else {
+        if(value.length >= 3) {
+          document.getElementById('message').innerHTML = ''
+          searchClients(atr, value);
+        } else {
+          document.getElementById('message').innerHTML = 'É necessário fornecer no mínimo 3 caracteres!'
+          renderTable([])
+        }
+      }
+    }
+
+    function debounce(func, timeout = 2000) {
+      let timer;
+      return (e) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func(e); }, timeout);
+      }
+    }
+
+    const processChange = debounce((e) => search());
+
+    document.getElementById('atr').addEventListener('change', (e) => {
+      const inputValue = document.getElementById('value');
+      const select = document.getElementById('atr');
+      if(e.target.value === 'id') {
+        inputValue.setAttribute('type', 'number')
+      } else {
+        inputValue.setAttribute('type', 'text')
+      }
+      inputValue.value = ''
+      processChange(e)
+    });
+
+    document.getElementById('value').addEventListener('input', (e) => {
+      processChange(e)
+    });
+  </script>
+</body>
+</html>
