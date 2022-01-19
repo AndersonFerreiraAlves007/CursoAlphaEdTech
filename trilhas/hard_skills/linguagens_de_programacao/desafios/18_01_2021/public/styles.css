@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+th {
+  color: black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#background {
+  background-image: url(assets/img/background.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+
+header h1{
+  text-align: center;
+}
+
+#container-btn-calculate-juros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-btn-calculate-juros button {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  
+}
+
+#container-btn-calculate-juros button:hover {
+ opacity: 1;
+}
+
+main {
+  display: flex;
+  margin: 20px 0px;
+}
+
+#container-form {
+  flex: 2;
+  padding: 10px;
+}
+
+#container-form div{
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+#container-form form{
+  display: flex;
+  flex-direction: column;
+}
+
+#container-form form button {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  background-color: rgb(177, 72, 93);
+  opacity: 0.8;
+}
+
+#container-form form button:hover {
+ opacity: 1;
+}
+
+#container-form form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  background-color: rgb(194, 191, 191);
+  padding: 10px;
+}
+
+#container-table {
+  flex: 3;
+  padding: 10px;
+}
+
+#container-table div{
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  overflow-x: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  #container-body-filters, main {
+    flex-direction: column;
+  }
+}
+
+#container-btn-groups {
+  display: flex;
+  justify-content: center;
+}
+
+#container-btn-groups button {
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.btn-select {
+  background-color: rgb(38, 163, 38);
+}
+
+.label-group {
+  /* width: 100%; */
+  text-align: center;
+  background-color: rgb(38, 163, 38);
+}
+
+#container-filters {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  margin: 0 10px;
+  opacity: 0.9;
+}
+
+#container-filters form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container-filters form > div{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-filter {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.container-filter input[type='radio'] {
+  /* width: 10px;
+  height: 10px; */
+  height: 50px;
+}
+
+.input{
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  background-color: rgb(194, 191, 191);
+  padding: 10px;
+  /* width: 50px; */
+  width: 200px;
+}
+
+.checkbox {
+  width: 50px;
+  margin-right: 10px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  background-color: rgb(194, 191, 191);
+  padding: 10px;
+}
+
+#container-filters form button{
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-top: 20px;
+  margin: 10px;
+  margin-top: 30px;
+  opacity: 0.8;
+  background-color: rgb(38, 163, 38);
+}
+
+#container-filters form button:hover{
+  background-color: rgb(38, 163, 38);
+  opacity: 1;
+}
+
+#container-body-filters {
+  display: flex;
+}
+
+.filterApplyValue {
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}

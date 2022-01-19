@@ -1,0 +1,10 @@
+{
+  "name": "18_01_2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Anderson Ferreira Alves",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

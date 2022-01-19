@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 1 - Aula 20 - Trilha linguagens de programação</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="background"></section>
+  <header>
+    <h1>Recebíveis de Joana</h1>
+  </header>
+  <section id="container-btn-groups">
+    <button id="btn-groups-cliente">Agrupar por cliente</button>
+    <button id="btn-groups-vencimento">Agrupar por vencimento</button>
+  </section>
+  <section id="container-filters">
+    <div id="container-body-filters">
+      <div style="flex: 1;display: flex;flex-direction: column;align-items: center;" id="container-filter-apply">
+        <h2>Filtros Aplicados</h2>
+      </div>
+      <form style="flex: 1;">
+        <h2>Redefinir Filtros</h2>
+        <div>
+          <div class="container-filter">
+            <input type="checkbox" class="checkbox" id="enable-date-start">
+            <input type="date" placeholder="Data início" class="input" id="input-date-start">
+          </div>
+          <div class="container-filter">
+            <input type="checkbox" class="checkbox" id="enable-date-end">
+            <input type="date" placeholder="Data fim" class="input" id="input-date-end">
+          </div>
+          <div class="container-filter">
+            <input type="checkbox" class="checkbox" id="enable-min-purchase-value">
+            <input type="number" placeholder="Valor mínimo" class="input" id="input-min-purchase-value">
+          </div>
+          <div class="container-filter">
+            <input type="checkbox"class="checkbox" id="enable-max-purchase-value">
+            <input type="number" placeholder="Valor máximo" class="input" id="input-max-purchase-value">
+          </div>
+        </div>
+        <button type="button" id="btn-apply-filters">Aplicar</button>
+      </form>
+    </div>
+  </section>
+  <section id="container-btn-calculate-juros">
+    <button id="btn-calculate-juros">Calcular Juros</button>
+  </section>
+  <main>
+    <section id="container-form">
+      <div>
+        <h2>Novo recebível</h2>
+        <form>
+          <input type="text" placeholder="Cliente" id="name-cliente">
+          <input type="date" placeholder="Vencimento" id="due-date">
+          <input type="number" placeholder="Valor Compra" id="purchase-value">
+          <button type="button" id="btn-add-receivable">Adicionar</button>
+        </form>
+      </div>
+    </section>
+    <section id="container-table">
+      <div>
+        <h2>Recebíveis</h2>
+        <table></table>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
