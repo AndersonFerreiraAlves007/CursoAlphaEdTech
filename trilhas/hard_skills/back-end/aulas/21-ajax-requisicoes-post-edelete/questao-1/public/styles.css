@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin: 10px 0px;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+th {
+  color: black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#container-table {
+  flex: 3;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#container-table div{
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  overflow-x: auto;
+}
+
+button {
+  background-color: rgba(136, 42, 61, 0.774);
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.7) ;
+}
+
+button:hover {
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.4) ;
+}
+
+select, input {
+  height: 25px;
+  padding-left: 5px;
+  width: 200px;
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#container-form {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-form form {
+  width: 300px;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#container-form form h3{
+  text-align: center;
+  margin: 15px 0 0px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid red;
+}
+
+#content-form {
+  flex: 1;
+  padding: 10px;
+}
+
+#container-btns {
+  padding: 0px 15px;
+  border-top: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+#container-btns button{
+  flex: 1;
+  margin: 0 5px;
+  height: 70%;
+  border: none;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.7) ;
+  cursor: pointer;
+}
+
+#new-funcionario {
+  flex: 1;
+  margin: 0 5px;
+  border: none;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.7) ;
+  cursor: pointer;
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  font-size: 30px;
+}

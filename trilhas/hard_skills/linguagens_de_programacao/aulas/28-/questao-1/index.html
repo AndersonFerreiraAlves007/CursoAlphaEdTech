@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 10</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+  <section id="section-superior"></section>
+  <section id="section-inferior"></section>
+  <section id="section-formulario">
+    <h1>Calculadora de Anderson</h1>
+    <div id="container-formulario">
+      <form action="" method="">
+        <div id="visor">
+          <span id="resultado"></span>
+        </div>
+        <div id="container-inputs-numeros">
+          <input type="text" placeholder="Digite o número 1">
+          <div id='divisor'></div>
+          <input type="text" placeholder="Digite o número 2">
+        </div>
+        <div id="operacoes">
+          <button type="button" onclick="somar()">
+            <img src="assets/img/icon_adicao.svg">
+          </button>
+          <button type="button" onclick="subtrair()">
+            <img src="assets/img/icone_subtracao.svg">
+          </button>
+          <button type="button" onclick="multiplicar()">
+            <img src="assets/img/icon_multiplicacao.svg" >
+          </button>
+          <button type="button" onclick="dividir()">
+            <img src="assets/img/icon_divisao.svg">
+          </button>
+        </div>
+     </form>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

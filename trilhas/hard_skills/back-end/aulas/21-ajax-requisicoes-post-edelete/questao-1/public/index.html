@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 21 trilha backend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="container-form">
+    <form method="" action="">
+      <h3>Novo Cliente</h3>
+      <div id="content-form">
+        <input id="name" type="text" placeholder="Nome">
+        <input id="email" type="email" placeholder="Email">
+      </div>
+      <div id="container-btns">
+        <button type="button" id="cancel-create-item">Cancelar</button>
+        <button type="button" id="confirm-create-item">Adicionar</button>
+      </div>
+    </form>
+  </section>
+  <div style="display: flex; position: fixed; bottom: 10px; right: 10px;">
+    <div>
+      <button type="button" id="new-funcionario">+</button>
+    </div>
+  </div>
+  <div>
+    <select id="atr">
+			<option value="id">ID</option>
+			<option value="name">Nome</option>
+			<option value="email">Email</option>
+		</select>
+    <input type="number" id="value" placeholder="valor">
+  </div>
+  <section id="container-table">
+    <div>
+      <h2>Lista Clientes</h2>
+      <table id="table"></table>
+    </div>
+  </section>
+  <div id="message"></div>
+  <script src="script.js"></script>
+</body>
+</html>
