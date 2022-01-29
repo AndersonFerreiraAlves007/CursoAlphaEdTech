@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Senhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="dialog-create-update">
+    <div id="body-dialog-create-update">
+      <div>Novo registro</div>
+      <div>
+        <input type="text" placeholder="Serviço" id="service-value-dialog-create-update">
+      </div>
+      <div>
+        <input type="text" placeholder="Login" id="login-value-dialog-create-update">
+      </div>
+      <div>
+        <input type="text" placeholder="Senha" id="password-value-dialog-create-update">
+      </div>
+      <div>
+        <button id="btn-cancel-dialog-create-update">Cancelar</button>
+        <button id="btn-confirm-dialog-create-update">Confirmar</button>
+      </div>
+    </div>
+  </section>
+  <section id="dialog-delete">
+    <div id="body-dialog-delete">
+      <div>Tem certeza que deseja deletar essa credencial?</div>
+      <div>
+        <span>Login: </span>
+        <span id="login-value-dialog-delete"></span>
+      </div>
+      <div>
+        <span>Senha:</span>
+        <span id="password-value-dialog-delete"></span>
+      </div>
+      <div>
+        <button id="btn-cancel-dialog-delete">Cancelar</button>
+        <button id="btn-confirm-dialog-delete">Confirmar</button>
+      </div>
+    </div>
+  </section>
+  <section id="container-search">
+    <input type="text" id="input-search">
+  </section>
+  <section>
+    <div id="list-credentials"></div>
+  </section>
+  <button id="btn-new-credential" type="button">
+    +
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
