@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Game Javascript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="background"></section>
+  <section id="container-dialog-create-game">
+    <div id="dialog-create-game">
+      <form action="">
+        <h2>Novo Game</h2>
+        <div>
+          <label for="input-game-dialog-create-game">Game:</label>
+          <input type="text" id="input-game-dialog-create-game" class="input">
+        </div>
+        <div>
+          <label for="input-year-dialog-create-game">Ano:</label>
+          <input type="number" id="input-year-dialog-create-game" minlength="1970" maxlength="2022" class="input">
+        </div>
+        <div>
+          <label for="input-genre-dialog-create-game">Gênero:</label>
+          <select id="input-genre-dialog-create-game" class="input">
+            <option value="FPS">FPS</option>
+            <option value="Battle Royale">Battle Royale</option>
+            <option value="MOBA">MOBA</option>
+            <option value="RPG">RPG</option>
+            <option value="MMO">MMO</option>      
+          </select>
+        </div>
+        <div>
+          <label for="input-multiplayer-dialog-create-game">Multiplayer:</label>
+          <input type="checkbox" id="input-multiplayer-dialog-create-game" class="input-checkbox">
+        </div>
+        <div>
+          <label for="input-offline-dialog-create-game">Offline:</label>
+          <input type="checkbox" id="input-offline-dialog-create-game" class="input-checkbox">
+        </div>
+        <div>
+          <label for="input-crossplataform-dialog-create-game">Crossplataform:</label>
+          <input type="checkbox" id="input-crossplataform-dialog-create-game" class="input-checkbox">
+        </div>
+        <div id="container-btn">
+          <button type="button" id="btn-close-dialog-create-game" class="btn-dialog">Cancelar</button>
+          <button type="button" id="btn-submit-dialog-create-game" class="btn-dialog">Confirmar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <main>
+    <h1>Lista de Games</h1>
+    <div id="container-table">
+      <table id="table-games"></table>
+    </div>
+    <button id="btn-create-game">+</button>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

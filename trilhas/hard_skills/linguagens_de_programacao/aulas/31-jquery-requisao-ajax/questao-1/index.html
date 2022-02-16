@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 31 Javascript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="background">
+
+  </section>
+  <section id="background2">
+
+  </section>
+  <main>
+    <header>
+      <h1>
+        Cotação de Moedas
+      </h1>
+    </header>
+    <section id="section-filters">
+      <div>
+        <label for="droplist-moedas">Moeda: </label>
+        <select name="droplist-moedas" id="droplist-moedas" class="input"></select>
+        <label for="start_date">Início Período: </label>
+        <input type="date" id="start_date" class="input">
+        <label for="end_date">Final Período: </label>
+        <input type="date" id="end_date" class="input">
+      </div>
+      <button type="button" id="btn-pesquisar">Pesquisar</button>
+    </section>
+    <section id="ultima-cotacao"></section>
+    <section id="container-table">
+      <div>
+        <table id="table"></table>
+      </div>
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

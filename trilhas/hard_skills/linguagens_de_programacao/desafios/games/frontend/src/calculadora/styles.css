@@ -1,0 +1,132 @@
+@font-face {
+  font-family: digitos;
+  src: url(assets/fonts/digital-7.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#container-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#container-calculator {
+  max-width: 300px;
+  background-color: crimson;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+header {
+  padding: 10px;
+}
+
+#visor {
+  height: 80px;
+  background-color: cyan;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 50px;
+  padding: 3px;
+  border-width: 5px;
+  border-style: inset;
+  font-family: digitos;
+  overflow: hidden;
+}
+
+#visor:after {
+  content: '';
+  display: inline-block;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 2px;
+  /* margin-bottom: 8px; */
+  height: 50px;
+  width: 4px;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-btn {
+  width: 25%;
+  height: 50px;
+  padding: 10px;
+}
+
+.container-btn-ce {
+  width: 50%;
+  height: 50px;
+  padding: 10px;
+}
+
+.container-btn-equal {
+  width: 50%;
+  height: 50px;
+  padding: 10px;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:focus, .btn::-moz-focus-inner{
+  outline:none;
+  border:none;
+}
+
+.btn{
+  font-family: digitos;
+  font-size:14px;
+  text-transform: uppercase;
+  font-weight:700;
+  border:none;
+  padding:10px;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+}
+
+.btn-green{
+  background:green;
+  color:#fff;
+  box-shadow:0 5px 0 #006000;
+}
+.btn-green:hover{
+  background:#006000;
+  box-shadow:0 5px 0 #003f00;
+}
+
+.btn-green:active {
+  position:relative;
+  top:5px;
+  box-shadow:none;
+}

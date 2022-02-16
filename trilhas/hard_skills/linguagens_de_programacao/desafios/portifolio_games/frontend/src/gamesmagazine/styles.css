@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sombra: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: crimson;
+  color: white;
+}
+
+td, th {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#btn-create-game {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: none;
+  background-color: crimson;
+  box-shadow: var(--sombra);
+  font-size: 40px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#btn-create-game:hover {
+  opacity: 1;
+}
+
+#container-dialog-create-game {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+#dialog-create-game {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: var(--sombra);
+}
+
+label {
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: crimson;
+  margin: 20px;
+}
+
+.input {
+  border: none;
+  box-shadow: var(--sombra);
+  height: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 5px;
+} 
+
+.input-checkbox {
+  border: none;
+  height: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+} 
+
+#container-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-dialog {
+  width: 40%;
+  height: 30px;
+  box-shadow: var(--sombra);
+  background-color: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn-dialog:hover {
+  opacity: 1;
+}
+
+#container-table {
+  box-shadow: var(--sombra);
+  margin: 30px;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+#background {
+  background-image: url(background.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+}

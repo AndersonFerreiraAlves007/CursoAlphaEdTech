@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sombra: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+  color: crimson;
+}
+
+section {
+  display: flex;
+}
+
+aside {
+  box-shadow: var(--sombra);
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+}
+
+main {
+  flex: 3;
+  height: 500px;
+  box-shadow: var(--sombra);
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: crimson;
+  opacity: 0.8;
+  color: white;
+}
+
+button:hover {
+  opacity: 1 ;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+}
+
+.row {
+  margin: 10px 0px;
+}
+
+#container-search {
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: rgb(192, 192, 192);
+}
