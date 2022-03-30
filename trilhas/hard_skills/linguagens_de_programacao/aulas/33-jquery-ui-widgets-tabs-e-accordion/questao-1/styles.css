@@ -31,3 +31,7 @@
   flex: 1;
   margin-left: 10px !important;
 }
+
+.bg {
+  background-color: red;
+}

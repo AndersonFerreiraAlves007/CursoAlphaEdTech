@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promisses</title>
+</head>
+<body>
+  <h1>Promisses</h1>
+  <p id="text"></p>
+  <button id="btn-generate">Gerar número</button>
+  <script>
+    let active = true
+    const API = 'http://localhost:3333'
+    const p = document.getElementById('text')
+
+    const btn = document.getElementById('btn-generate')
+
+    btn.addEventListener('click', () => {
+      active = false
+      btn.disabled = true;
+      new Promise((resolve, reject) => {
+        let idTimeout;
+        idTimeout = setTimeout(reject, 3000);
+        fetch(`${API}/generate_random_number`)
+          .then(result => result.json())
+          .then(result => {
+            clearTimeout(idTimeout)
+            resolve(result.random_number)
+          })
+          .catch(err => {
+            clearTimeout(idTimeout)
+            reject()
+          })
+      })
+        .then(result => {
+          p.innerHTML = result
+          active = true
+          btn.disabled = false;
+        })
+        .catch(err => {
+          alert('Erro timeout!!!')
+          active = true
+          btn.disabled = false;
+        })
+    })
+  </script>
+</body>
+</html>

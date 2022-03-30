@@ -62,6 +62,7 @@ $(document).ready(function() {
   
   $("#tabs").tabs({
     classes: {
+      "ui-tabs-tab": "bg",
       "ui-tabs-panel": "teste"
     }
   });
