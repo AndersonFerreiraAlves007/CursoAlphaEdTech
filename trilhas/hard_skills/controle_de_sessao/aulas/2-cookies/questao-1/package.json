@@ -1,0 +1,8 @@
+{
+  "name": "cookies",
+  "version": "1.0.0",
+  "author": "Anderson Ferreira Alves",
+  "private": true,
+  "license": "MIT",
+  "workspaces": ["backend", "frontend"]
+}
