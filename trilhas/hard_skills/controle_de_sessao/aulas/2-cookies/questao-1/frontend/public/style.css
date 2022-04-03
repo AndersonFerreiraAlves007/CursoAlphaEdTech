@@ -3,3 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(175, 159, 159);
+  color: black;
+  padding: 15px 10px;
+  margin: 10px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button:hover {
+  background-color: crimson;
+  color: white
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30vw;
+}

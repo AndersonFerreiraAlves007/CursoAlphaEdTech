@@ -1,6 +1,6 @@
 const express = require('express')
 
-const PORT = Number.parserInt(process.env.SERVER_PORT, 10)
+const PORT = Number.parseInt(process.env.SERVER_PORT, 10)
 
 const app = express()
 
